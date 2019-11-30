@@ -77,7 +77,7 @@ namespace CMSWebsite
             return ResultSet;
         }
 
-        public Page findPage(int id)
+        public Page FindPage(int id)
         {
             MySqlConnection Connect = new MySqlConnection(ConnectionString);
 
@@ -114,9 +114,11 @@ namespace CMSWebsite
                             case "PAGEBODY":
                                 currentpage.SetPageBody(value);
                                 break;
-                            case "PAGEIMAGE":
-                                currentpage.SetPageImage();
-                                break;
+
+                            //I wanted to set the image of the page, but I cant seem to find out how to convert string to a type HttpPostedFileBase, Sorry!
+                            //case "PAGEIMAGE":
+                                //currentpage.SetPageImage();
+                                //break;
                             case "UPLOADDATE":
                                 currentpage.SetUploadDate(DateTime.ParseExact(value, "M/d/yyyy hh:mm:ss tt", new CultureInfo("en-US")));
                                 break;
@@ -124,13 +126,98 @@ namespace CMSWebsite
                         }
 
                     }
+
+                    //adding the page to the list of pages
+                    pages.Add(currentpage);
                 }
+
+                result_page = pages[0]; //getting the first page
            
             }
-            catch
+            catch(Exception ex)
             {
+                Debug.WriteLine("Something went wrong in the find Student method!");
+                Debug.WriteLine(ex.ToString());
 
             }
+
+            Connect.Close();
+            Debug.WriteLine("Database Connection Terminated.");
+
+            return result_page;
         }
+
+        public void AddPage(Page new_page)
+        {
+            string query = "insert into pages (PAGETITLE, PAGEBODY, PAGEIMAGE, DATEUPLOAD) values ('{0}','{1}','{2}','{3}')";
+            query = String.Format(query, new_page.GetPageTitle(), new_page.GetPageBody(), new_page.GetPageImage(), new_page.GetUploadDate().ToString("yyyy-MM-dd"));
+
+
+            MySqlConnection Connect = new MySqlConnection(ConnectionString);
+            MySqlCommand cmd = new MySqlCommand(query, Connect);
+            try
+            {
+                Connect.Open();
+                cmd.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("Something went wrong in the AddStudent Method!");
+                Debug.WriteLine(ex.ToString());
+            }
+
+            Connect.Close();
+        }
+
+        public void UpdatePage(int pageid, Page new_page)
+        {
+            string query = "update PAGES set PAGETITLE='{0}', PAGEBODY='{1}', PAGEIMAGE='{2}' where PAGEID={3}";
+            query = String.Format(query, new_page.GetPageTitle(), new_page.GetPageBody(), new_page.GetPageImage(), pageid);
+
+  
+            MySqlConnection Connect = new MySqlConnection(ConnectionString);
+            MySqlCommand cmd = new MySqlCommand(query, Connect);
+            try
+            {
+                Connect.Open();
+                cmd.ExecuteNonQuery();
+                Debug.WriteLine("Executed query " + query);
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("Something went wrong in the UpdatePage Method!");
+                Debug.WriteLine(ex.ToString());
+            }
+
+            Connect.Close();
+        }
+        public void DeletePage(int pageid)
+        {
+
+            string removespage = "delete from PAGES where PAGEID = {0}";
+            removespage = String.Format(removespage, pageid);
+
+            MySqlConnection Connect = new MySqlConnection(ConnectionString);
+           
+            MySqlCommand cmd_removepage = new MySqlCommand(removespage, Connect);
+            try
+            {
+                //try to execute both commands!
+                Connect.Open();
+                cmd_removepage.ExecuteNonQuery();
+                Debug.WriteLine("Executed query " + cmd_removepage);
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("Something went wrong in the delete Student Method!");
+                Debug.WriteLine(ex.ToString());
+            }
+
+            Connect.Close();
+        }
+
+
+
     }
 }
