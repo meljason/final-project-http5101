@@ -15,7 +15,7 @@ namespace CMSWebsite
         private static string Password { get { return ""; } }
         private static string Database { get { return "cms"; } }
         private static string Server { get { return "localhost"; } }
-        private static string Port { get { return "8889"; } }
+        private static string Port { get { return "3306"; } }
 
         private static string ConnectionString
         {
@@ -85,7 +85,7 @@ namespace CMSWebsite
 
             try
             {
-                string query = "select * from page where pageid = " + id;
+                string query = "select * from pages where pageid = " + id;
                 Debug.WriteLine("Connection Initialized...");
 
                 Connect.Open();

@@ -11,34 +11,33 @@ namespace CMSWebsite
 {
 
 
-    public partial class ListPages
+    public partial class UpdatePage
     {
-
         /// <summary>
-        /// page_search control.
+        /// student control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox page_search;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl pages;
 
         /// <summary>
-        /// sql_debugger control.
+        /// page_title control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl sql_debugger;
+        protected global::System.Web.UI.WebControls.TextBox page_title;
 
         /// <summary>
-        /// pages_result control.
+        /// page_body control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl pages_result;
+        protected global::System.Web.UI.WebControls.TextBox page_body;
     }
 }

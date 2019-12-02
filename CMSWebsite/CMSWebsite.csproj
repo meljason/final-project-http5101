@@ -126,6 +126,7 @@
     <Content Include="Layout.Master" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="ListPages.aspx" />
+    <Content Include="NewPage.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -154,6 +155,8 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="ShowPage.aspx" />
+    <Content Include="UpdatePage.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -176,9 +179,30 @@
     <Compile Include="ListPages.aspx.designer.cs">
       <DependentUpon>ListPages.aspx</DependentUpon>
     </Compile>
+    <Compile Include="NewPage.aspx.cs">
+      <DependentUpon>NewPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewPage.aspx.designer.cs">
+      <DependentUpon>NewPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Page.cs" />
     <Compile Include="PagesDB.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShowPage.aspx.cs">
+      <DependentUpon>ShowPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShowPage.aspx.designer.cs">
+      <DependentUpon>ShowPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdatePage.aspx.cs">
+      <DependentUpon>UpdatePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdatePage.aspx.designer.cs">
+      <DependentUpon>UpdatePage.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
