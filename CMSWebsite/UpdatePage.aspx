@@ -7,11 +7,11 @@
         <form>
             <div class="form-group">
                 <label>Title</label>
-                <asp:TextBox runat="server" class="form-control" ID="page_title" placeholder="Title" />
+                <asp:TextBox runat="server" class="form-control" ID="page_title" placeholder="" />
             </div>
             <div class="form-group">
                 <label>Body</label>
-                <asp:TextBox runat="server" TextMode="MultiLine" class="form-control" ID="page_body" placeholder="Body" />
+                <asp:TextBox runat="server" TextMode="MultiLine" class="form-control" ID="page_body" placeholder="" />
             </div>
 
             <div class="input-group pb-3">

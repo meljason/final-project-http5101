@@ -34,6 +34,7 @@ namespace CMSWebsite
                 new_page.SetPageBody(page_body.Text);
                 //new_page.SetPageImage(page_image.Text);
 
+
                 try
                 {
                     db.UpdatePage(Int32.Parse(pageid), new_page);

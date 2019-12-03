@@ -48,7 +48,7 @@ namespace CMSWebsite
                 page_title.InnerHtml = page_record.GetPageTitle();
                 page_body.InnerHtml = page_record.GetPageBody();
                 //page_image.InnerHtml = page_record.GetPageImage();
-                upload_date.InnerHtml = page_record.GetUploadDate().ToString("yyyy-M-dd");
+                upload_date.InnerHtml = page_record.GetUploadDate().ToString("yyyy-MM-dd");
             }
             else
             {

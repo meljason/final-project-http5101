@@ -7,13 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CMSWebsite
-{
-
-
-    public partial class ShowPage
-    {
-
+namespace CMSWebsite {
+    
+    
+    public partial class ShowPage {
+        
         /// <summary>
         /// page control.
         /// </summary>
@@ -22,7 +20,7 @@ namespace CMSWebsite
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl page;
-
+        
         /// <summary>
         /// page_title_name control.
         /// </summary>
@@ -31,7 +29,7 @@ namespace CMSWebsite
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl page_title_name;
-
+        
         /// <summary>
         /// page_title control.
         /// </summary>
@@ -40,7 +38,7 @@ namespace CMSWebsite
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl page_title;
-
+        
         /// <summary>
         /// page_body control.
         /// </summary>
@@ -49,16 +47,7 @@ namespace CMSWebsite
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl page_body;
-
-        /// <summary>
-        /// page_image control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl page_image;
-
+        
         /// <summary>
         /// upload_date control.
         /// </summary>
@@ -67,5 +56,14 @@ namespace CMSWebsite
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl upload_date;
+        
+        /// <summary>
+        /// pages_result control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl pages_result;
     }
 }

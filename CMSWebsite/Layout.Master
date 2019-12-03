@@ -37,10 +37,10 @@
         </div>
     </form>
 
-    <footer class="page-footer font-small text-white bg-dark sticky-bottom">
+    <footer class="page-footer font-small text-white bg-dark">
 
 
-        <div class="footer-copyright text-center py-3">
+        <div class="footer-copyright text-center py-3 sticky-bottom">
             © 2019 Copyright:
            <a href="https://github.com/meljason/">Jason's Github</a>
         </div>
