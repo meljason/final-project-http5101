@@ -10,7 +10,7 @@
     <script src="https://kit.fontawesome.com/c7c508e324.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
+    <header class="fixed-top sticky-top">
         <nav class="navbar navbar-expand-lg navbar-light bg-dark pt-0">
             <a class="navbar-brand text-white" href="#">LOGO</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,7 +37,7 @@
         </div>
     </form>
 
-    <footer class="page-footer font-small text-white bg-dark">
+    <footer class="page-footer font-small text-white bg-dark sticky-bottom">
 
 
         <div class="footer-copyright text-center py-3">
