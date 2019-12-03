@@ -43,12 +43,14 @@ namespace CMSWebsite
             {
 
                 Page page_record = db.FindPage(Int32.Parse(pageid));
-
+                page_title_name.InnerHtml = page_record.GetPageTitle();
+                
                 page_title_name.InnerHtml = page_record.GetPageTitle();
                 page_title.InnerHtml = page_record.GetPageTitle();
                 page_body.InnerHtml = page_record.GetPageBody();
                 //page_image.InnerHtml = page_record.GetPageImage();
                 upload_date.InnerHtml = page_record.GetUploadDate().ToString("yyyy-MM-dd");
+
             }
             else
             {

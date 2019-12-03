@@ -54,7 +54,14 @@ namespace CMSWebsite
                 string dateupload = row["dateupload"];
                 pages_result.InnerHtml += "<td>" + dateupload + "</td>";
 
-                pages_result.InnerHtml += "<td><i class=\"fas fa-trash-alt\"></i>";
+                //pages_result.InnerHtml += "<td><i class=\"fas fa-trash-alt\"></i>";
+               
+
+
+                pages_result.InnerHtml += "<td><a href=\"DeletePage.aspx?pageid=" + pageid + "\"><i class=\"fas fa-trash-alt\" style=\"color:black\"></i></a></td>";
+
+
+                //Attempts in adding the delete buttons:::
 
                 //pages_result.InnerHtml += "<td><button runat=\"server\" OnClientClick=\"if(!confirm('Are you sure you want to delete this?')) return false;\" OnClick=\"Delete_Page\"><i class=\"fas fa-trash-alt\"></i>";
 

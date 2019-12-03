@@ -108,10 +108,11 @@ namespace CMSWebsite
 
                         switch (key)
                         {
-                            case "PAGETITLE":
+                            case "pagetitle":
+                                Debug.WriteLine("we are trying to set the page title to " + value);
                                 currentpage.SetPageTitle(value);
                                 break;
-                            case "PAGEBODY":
+                            case "pagebody":
                                 currentpage.SetPageBody(value);
                                 break;
 
@@ -119,8 +120,10 @@ namespace CMSWebsite
                             //case "PAGEIMAGE":
                                 //currentpage.SetPageImage();
                                 //break;
-                            case "UPLOADDATE":
-                                currentpage.SetUploadDate(DateTime.ParseExact(value, "M/d/yyyy hh:mm:ss tt", new CultureInfo("en-US")));
+
+                            case "dateupload":
+                                Debug.WriteLine("we are trying to set the page date to " + value);
+                                currentpage.SetUploadDate(DateTime.ParseExact(value, "dd/MM/yyyy hh:mm:ss", new CultureInfo("en-US")));
                                 break;
 
                         }
@@ -136,7 +139,7 @@ namespace CMSWebsite
             }
             catch(Exception ex)
             {
-                Debug.WriteLine("Something went wrong in the find Student method!");
+                Debug.WriteLine("Something went wrong in the find Page method!");
                 Debug.WriteLine(ex.ToString());
 
             }
@@ -163,7 +166,7 @@ namespace CMSWebsite
             }
             catch (Exception ex)
             {
-                Debug.WriteLine("Something went wrong in the AddStudent Method!");
+                Debug.WriteLine("Something went wrong in the NewPage Method!");
                 Debug.WriteLine(ex.ToString());
             }
 
@@ -210,7 +213,7 @@ namespace CMSWebsite
             }
             catch (Exception ex)
             {
-                Debug.WriteLine("Something went wrong in the delete Student Method!");
+                Debug.WriteLine("Something went wrong in the delete Page Method!");
                 Debug.WriteLine(ex.ToString());
             }
 

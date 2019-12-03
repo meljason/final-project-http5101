@@ -20,6 +20,7 @@ namespace CMSWebsite
 
         public string GetPageBody()
         {
+            Debug.WriteLine("the page title is " + PageTitle);
             return PageBody;
         }
 
@@ -40,6 +41,7 @@ namespace CMSWebsite
 
         public void SetPageBody(string value)
         {
+            Debug.WriteLine("the page body is " + value);
             PageBody = value;
         }
 
