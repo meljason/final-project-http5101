@@ -18,6 +18,7 @@
                 <th scope="col">Body</th>
                 <th scope="col">Image</th>
                 <th scope="col">Date Uploaded</th>
+                <th scope="col">Actions</th>
             </tr>
         </thead>
         <tbody>

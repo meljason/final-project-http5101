@@ -24,7 +24,7 @@ namespace CMSWebsite
 
             PagesDB db = new PagesDB();
 
-            //deleting the student from the system
+            //deleting the page from the system
             if (valid)
             {
                 db.DeletePage(Int32.Parse(pageid));
@@ -39,12 +39,10 @@ namespace CMSWebsite
             string pageid = Request.QueryString["pageid"];
             if (String.IsNullOrEmpty(pageid)) valid = false;
 
-            //We will attempt to get the record we need
             if (valid)
             {
 
                 Page page_record = db.FindPage(Int32.Parse(pageid));
-
 
                 page_title_name.InnerHtml = page_record.GetPageTitle();
                 page_title.InnerHtml = page_record.GetPageTitle();
@@ -60,7 +58,7 @@ namespace CMSWebsite
 
             if (!valid)
             {
-                page.InnerHtml = "There was an error finding that student.";
+                page.InnerHtml = "There was an error finding that page.";
             }
         }
     }

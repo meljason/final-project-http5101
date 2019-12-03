@@ -86,7 +86,7 @@ namespace CMSWebsite
             try
             {
                 string query = "select * from pages where pageid = " + id;
-                Debug.WriteLine("Connection Initialized...");
+               Debug.WriteLine("Connection Initialized...");
 
                 Connect.Open();
 

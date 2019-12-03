@@ -54,7 +54,30 @@ namespace CMSWebsite
                 string dateupload = row["dateupload"];
                 pages_result.InnerHtml += "<td>" + dateupload + "</td>";
 
+                pages_result.InnerHtml += "<td><i class=\"fas fa-trash-alt\"></i>";
+
+                //pages_result.InnerHtml += "<td><button runat=\"server\" OnClientClick=\"if(!confirm('Are you sure you want to delete this?')) return false;\" OnClick=\"Delete_Page\"><i class=\"fas fa-trash-alt\"></i>";
+
+                //pages_result.InnerHtml += "<asp:LinkButton runat=\"server\" OnClientClick=\"if (!confirm(\'Are you sure you want to delete this?\')) return false; \" Text=\" < i class=\'fas fa-trash-alt\'></i>\" OnClick=\"Delete_Page\" />";
+
+                //pages_result.InnerHtml += "<asp:Button OnClientClick=\"if (!confirm('Are you sure you want to delete this?')) return false; \" OnClick=\"Delete_Page\" CssClass=\"btn btn-dark\" Text=\"Delete\" runat=\"server\" />";
                 pages_result.InnerHtml += "</tr>";
+            }
+        }
+
+        protected void Delete_Page(object sender, EventArgs e)
+        {
+            bool valid = true;
+            string pageid = Request.QueryString["pageid"];
+            if (String.IsNullOrEmpty(pageid)) valid = false;
+
+            PagesDB db = new PagesDB();
+
+            //deleting the page from the system
+            if (valid)
+            {
+                db.DeletePage(Int32.Parse(pageid));
+                Response.Redirect("ListPages.aspx");
             }
         }
     }
