@@ -26,6 +26,8 @@
                 <tbody>
                     <div id="pages_result" runat="server" />
                 </tbody>
+
+                <%-- This is my attempt to add pagination feature --%>
                 <%--<tr>
                     <td colspan="5" style="text-align:center;">
                         <asp:DataPager id="DataPager1" runat="server"

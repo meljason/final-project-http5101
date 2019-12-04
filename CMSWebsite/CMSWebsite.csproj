@@ -223,6 +223,8 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="App_Start\App_LocalResources\" />
+    <Folder Include="Database\" />
+    <Folder Include="Wireframe\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
